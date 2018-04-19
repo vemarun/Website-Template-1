@@ -1,1 +1,1 @@
-# Website Template #1
+A simple Eye Catching One-Page Website Template
