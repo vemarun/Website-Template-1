@@ -1,4 +1,4 @@
-A simple Eye Catching One-Page Website Template
+A simple Eye Catching One-Page Website Template with Parallax Effect
 
 ![alt text](https://raw.githubusercontent.com/vemarun/Website-Template-1/master/img/screen.png)
 
