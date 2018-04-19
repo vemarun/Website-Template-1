@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="assets/style.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js"></script>
+
+
+	<title>Pinkilicious - A Free theme by lava</title>
+	<script>
+		$(document).ready(function() {
+			$('#header').delay(100).fadeIn(2000);
+			$(document).scroll(function() {
+				var y = $(this).scrollTop();
+				if (y > 400) {
+					$('#moto-align').stop().fadeIn();
+				} else if (y < 400) {
+					$('#moto-align').stop().fadeOut();
+				}
+				if (y > 1030) {
+					$('#box1-align, #box2-align').stop().fadeIn();
+				} else if (y < 1030) {
+					$('#box1-align, #box2-align').stop().fadeOut();
+				}
+				if (y > 300) {
+					$('#navbar').fadeIn();
+				} else {
+					$('#navbar').hide();
+				}
+			});
+			$(function() {
+				var body = $('#box1');
+				var backgrounds = [
+					'url(img/hands-people-woman-working.jpg)',
+					'url(img/pexels-photo-326424.jpeg)'
+				];
+				var current = 0;
+
+				function nextBackground() {
+					body.css({
+						'background': backgrounds[current = ++current % backgrounds.length],
+						'background-size': 'cover'
+					});
+
+					setTimeout(nextBackground, 5000);
+				}
+
+				setTimeout(nextBackground, 5000);
+				body.css({
+					'background': backgrounds[0]
+				});
+
+			});
+			$(function() {
+				var body = $('#box2');
+				var backgrounds = [
+					'url(img/pexels-photo-326424.jpeg)',
+					'url(img/hands-people-woman-working.jpg)'
+
+				];
+				var current = 0;
+
+				function nextBackground() {
+					body.css({
+						'background': backgrounds[current = ++current % backgrounds.length],
+						'background-size': 'cover'
+					});
+
+					setTimeout(nextBackground, 4000);
+				}
+
+				setTimeout(nextBackground, 4000);
+				body.css({
+					'background': backgrounds[0]
+				});
+
+			});
+
+		});
+
+	</script>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+	<div id="wrapper">
+		<div id="navbar">
+			<p id="navbar_heading">Pinkilicious</p>
+			<ul class="nav navbar-menu">
+				<li class="active"><a href="#main">Home</a></li>
+				<li><a href="#moto">Work</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#footer">Contact</a></li>
+			</ul>
+		</div>
+
+
+		<div id="main">
+			<a href="#" id="menu-icon"></a>
+			<div class="navbar">
+				<a href="#main" class="active">Home</a>
+				<a href="#moto">Work</a>
+				<a href="#services">Services</a>
+				<a href="#footer">Contact</a>
+			</div>
+
+			<div id="header">
+				<p class="sub-heading " id="sub1">An Attractive Website Template to Please Your Eyes</p>
+				<hr id="underline">
+				<p id="heading">Pinkilicious</p>
+			</div>
+		</div>
+
+
+		<div id="moto">
+			<div id="moto-align">
+				<span class="detail">We use imagination  <br>to craft<br> real world products</span>
+			</div>
+		</div>
+
+
+		<div class="services" id="services">
+			<div class="box" id="box1">
+				<div id="box1-align">
+					<span class="detail detail2">Website Design<br>and<br> development</span>
+				</div>
+			</div>
+			<div class="box_mid">
+				<p>S<br> E
+					<br>R<br>V<br>I<br>C<br>E<br>S</p>
+			</div>
+			<div class="box" id="box2">
+				<div id="box2-align">
+					<span class="detail detail2">App Development<br>and<br>SE Optimisation</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div id="footer_logo">Pinkilicious <br>
+
+			</div>
+			<div id="footer_box1">
+				<h2>Follow Us</h2>
+				<hr style="width: 70%; border:1px solid">
+				<a href="#">Twitter</a><br>
+				<a href="#">Facebook</a><br>
+				<a href="#">Instagram</a><br>
+			</div>
+			<div id="footer_box2">
+				<h3>Company</h3>
+				<hr style="width: 50%; padding-left: 20%; border:1px solid">
+				<a href="#">About Us</a><br>
+				<a href="#">Contact Us</a><br>
+				<a href="#">Privacy Policy</a><br>
+				<a href="#">Terms and Conditions</a><br>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
